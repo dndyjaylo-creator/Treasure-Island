@@ -20,11 +20,8 @@ android {
 
     packagingOptions {
         exclude 'META-INF/robovm/ios/robovm.xml'
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
+        jniLibs {
+            useLegacyPackaging = true
         }
     }
 }
