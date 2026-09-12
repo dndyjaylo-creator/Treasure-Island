@@ -1,0 +1,2 @@
+rootProject.name = 'TreasureIslandLostMap'
+include ':core', ':desktop', ':android'

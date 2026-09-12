@@ -1,0 +1,30 @@
+buildscript {
+    ext {
+        gdxVersion = '1.12.1'
+    }
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.4'
+    }
+}
+
+allprojects {
+    apply plugin: 'eclipse'
+    version = '1.0'
+
+    repositories {
+        mavenCentral()
+        google()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    }
+}
+
+configure(subprojects - project(':android')) {
+    apply plugin: 'java-library'
+    sourceCompatibility = 11
+    targetCompatibility = 11
+}

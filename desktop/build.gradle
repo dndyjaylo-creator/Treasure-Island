@@ -1,0 +1,12 @@
+apply plugin: 'application'
+
+mainClassName = 'com.sajottionusaraga.treasureisland.desktop.DesktopLauncher'
+application {
+    mainClass = mainClassName
+}
+
+dependencies {
+    implementation project(':core')
+    implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+}
